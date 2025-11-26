@@ -21,27 +21,18 @@ public class Calculadora {
         double num2 = scanner.nextDouble();
 
             switch (opcao) {
-                case 1:
-                    System.out.println("Resultado: " + num1 + " + " + num2 + " = " + (num1 + num2));
-                    break;
-                case 2:
-                    System.out.println("Resultado: " + num1 + " - " + num2 + " = " + (num1 - num2));
-                    break;
-                case 3:
-                    System.out.println("Resultado: " + num1 + " * " + num2 + " = " + (num1 * num2));
-                    break;
-                case 4:
+                case 1 -> System.out.println("Resultado: " + num1 + " + " + num2 + " = " + (num1 + num2));
+                case 2 -> System.out.println("Resultado: " + num1 + " - " + num2 + " = " + (num1 - num2));
+                case 3 -> System.out.println("Resultado: " + num1 + " * " + num2 + " = " + (num1 * num2));
+                case 4 -> {
                     if (num2 != 0) {
                         System.out.println("Resultado: " + num1 + " / " + num2 + " = " + (num1 / num2));
                     } else {
                         System.out.println("Erro: Divisão por zero não é permitida!");
                     }
-                    break;
-                default:
-                    System.out.println("Opção inválida!");
+                }
+                default -> System.out.println("Opção inválida!");
             }
         }
     }
 }
-
-//teste teste teste
