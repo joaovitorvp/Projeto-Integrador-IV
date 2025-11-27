@@ -1,5 +1,5 @@
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class CalculadoraTeste {
     
@@ -131,18 +131,18 @@ public class CalculadoraTeste {
         assertEquals(3.333, resultado, 0.01);
     }
     
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void testDividirPorZero() {
-        Calculadora.dividir(10, 0);
+        assertThrows(ArithmeticException.class, () -> Calculadora.dividir(10, 0));
     }
     
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void testDividirZeroPorZero() {
-        Calculadora.dividir(0, 0);
+        assertThrows(ArithmeticException.class, () -> Calculadora.dividir(0, 0));
     }
     
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void testDividirNegativoPorZero() {
-        Calculadora.dividir(-10, 0);
+        assertThrows(ArithmeticException.class, () -> Calculadora.dividir(-10, 0));
     }
 }
